@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(arBanners.length){
       banerBlock.querySelector('.b-slide__image').style.backgroundImage = 'url(' + arBanners[0].image.substring(1, arBanners[0].image.length) + ')';
-      banerBlock.querySelector('.b-slide__title').innerHTML = arBanners[0].title;
-      banerBlock.querySelector('.b-slide__text').innerHTML = arBanners[0].text;
+      banerBlock.querySelector('.b-slide__title').textContent = arBanners[0].title;
+      banerBlock.querySelector('.b-slide__text').textContent = arBanners[0].text;
     }
 
     let sliderDot = document.querySelector('.b-slider__dot:not(.b-slider__dot--selected)');
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
           target.classList.add('b-slider__dot--selected');
           banerBlock.querySelector('.b-slide__image').style.backgroundImage = 'url(' + banner.image.substring(1, banner.image.length) + ')';
-          banerBlock.querySelector('.b-slide__title').innerHTML = banner.title;
-          banerBlock.querySelector('.b-slide__text').innerHTML = banner.text;
+          banerBlock.querySelector('.b-slide__title').textContent = banner.title;
+          banerBlock.querySelector('.b-slide__text').textContent = banner.text;
         }
       });
     }
